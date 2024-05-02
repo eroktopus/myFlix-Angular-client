@@ -1,0 +1,38 @@
+<!-- src/app/user-login-form/user-login-form.component.html -->
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Sign In!</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <mat-form-field>
+        <input
+          matInput
+          [(ngModel)]="userData.Username"
+          placeholder="Username"
+          type="text"
+          name="Username"
+          required
+          autocomplete="username"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          [(ngModel)]="userData.Password"
+          type="password"
+          placeholder="Password"
+          name="Password"
+          required
+          autocomplete="current-password"
+        />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="LoginUser()" color="primary">
+      Sign Up
+    </button>
+  </mat-card-actions>
+</mat-card>
+<p>user-login-form works!</p>
