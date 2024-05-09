@@ -94,15 +94,14 @@ export class MovieCardComponent implements OnInit {
    * @param movie The selected movie object to be added to favorites.
    */
   addFavoriteMovie(movie: any): void {
-    const username = 'currentUser'; // Placeholder for username (to be replaced with actual username retrieval)
     const MovieId = movie._id; // Assuming movie object has an _id field
-  
+    const user = JSON.parse(localStorage.getItem('currentUser') || '');
+    const username = user.Username; // Placeholder for username (to be replaced with actual username retrieval)
     // API call to add the movie to user's favorites
     this.fetchMovies.addFavoriteMovie(username, MovieId).subscribe(
       (resp: any) => {
         console.log(resp);
         // Update favorites in local storage
-        const user = JSON.parse(localStorage.getItem(username) || '');
         user.FavoriteMovies.push(MovieId);
         localStorage.setItem(username, JSON.stringify(user));
 

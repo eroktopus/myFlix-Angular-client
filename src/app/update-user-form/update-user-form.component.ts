@@ -60,7 +60,8 @@ export class UpdateUserComponent implements OnInit {
    * Updates user data.
    */
   updateUser(): void {
-    const username = 'example_username'; // Replace with actual username
+    const user = JSON.parse(localStorage.getItem('currentUser') || '');
+    const username = user.Username; 
     const userData = { ...this.userData }; // Make a copy of userData to avoid potential mutation
     this.fetchApiData.updateUser(username, userData).subscribe(
       (response: any) => {
