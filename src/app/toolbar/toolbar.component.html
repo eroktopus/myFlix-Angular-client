@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <span class="app-title">myFlix</span>
+  <span class="spacer"></span>
+  <span class="spacer"></span>
+  <button mat-button class="toolbar-button" [routerLink]="'/movies'">
+    Movies
+  </button>
+  <button mat-button class="toolbar-button" routerLink="/profile">
+    My Profile
+  </button>
+  <button mat-button class="toolbar-button" (click)="navigateToWelcome()">
+    Logout
+  </button>
+</mat-toolbar>

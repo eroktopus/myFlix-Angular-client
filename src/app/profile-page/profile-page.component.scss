@@ -1,0 +1,35 @@
+.page-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px !important;
+  padding-top: 20px;
+  background-color: #72A98F;
+}
+
+.username-welcome {
+  color: #433A3F;
+  background-color: #72A98F;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.mat-tab-label {
+  font-weight: bold;
+  color: white !important;
+}
+
+.movie-grid {
+  padding-left: 20px;
+  background-color: #72A98F;
+}
+
+.no-favorites-message {
+  color: #433A3F;
+  font-size: 17px;
+}
+
+/* Add style for the favorite movies label */
+.favorite-movies-label {
+  font-weight: bold;
+  color: white;
+}

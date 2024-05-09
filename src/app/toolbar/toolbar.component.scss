@@ -1,0 +1,22 @@
+.mat-toolbar {
+  background-color: #3D5A6C;
+  position: fixed; /* Set position to fixed */
+  top: 0; /* Place the toolbar at the top of the page */
+  width: 200%; /* Make the toolbar span the entire width of the page */
+  z-index: 1000; /* Ensure the toolbar is above other elements */
+  color:gray;
+  margin-right: 10px;
+}
+
+.toolbar-button {
+  color: #433A3F !important;
+  background-color: #72A98F;
+  margin-left: 10px;
+  font-style: bold;
+  width: 100px;
+}
+
+.app-title {
+  margin-right: 25px;
+  font-size: 30px;
+}

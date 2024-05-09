@@ -1,0 +1,51 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #72A98F !important;
+  color: #433A3F;
+}
+
+.movie-page {
+  display: flex; /* Ensure flex layout */
+  flex-wrap: nowrap; /* Prevent wrapping of movie cards */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-top: 60px; 
+  background-color: #72A98F;
+  width: 100vw; /* Cover the entire viewport width */
+}
+
+
+.movie-card-page {
+  background-color: #72A98F;
+  padding-bottom: 20px;
+  border : none !important;
+}
+
+.movie-card-header {
+  background-color: #72A98F;
+  color: #433A3F;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+.movie-card-footer {
+  background-color: #72A98F;
+  color: black;
+}
+
+.movie-card-button {
+  background-color: #3D5A6C;
+  color: rgb(185, 176, 176);
+  padding: 10px;
+  margin: 10px;
+}
+
+.movie-card-icon-button {
+  background-color: #72A98F;
+  color: #3D5A6C;
+}
+
+.movie-image {
+  width: 100%;
+  height: 100%;
+}

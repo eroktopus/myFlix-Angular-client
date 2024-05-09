@@ -1,0 +1,21 @@
+.welcome-button {
+  background-color: #3D5A6C;
+  color: grey;
+  margin: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: large;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100vh; /* Make the container fill the entire viewport height */
+}
+
+.app-title {
+  font-size: 2rem;
+  color: #433A3F;
+}
