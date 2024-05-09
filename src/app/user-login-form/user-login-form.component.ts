@@ -60,7 +60,7 @@ export class UserLoginFormComponent implements OnInit {
   }
   
   /** 
-   * Fetches the user profile after successful login.
+   * Fetches the user's profile after successful login.
    */
   getUserProfile(): void {
     this.fetchApiData.getUserProfile().subscribe(
