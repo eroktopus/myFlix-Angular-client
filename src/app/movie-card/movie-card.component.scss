@@ -8,14 +8,14 @@ body {
   display: flex; /* Ensure flex layout */
   flex-wrap: nowrap; /* Prevent wrapping of movie cards */
   overflow-x: auto; /* Enable horizontal scrolling */
-  padding-top: 60px; 
+  margin-top: 100; 
   background-color: #72A98F;
   width: 100vw; /* Cover the entire viewport width */
 }
 
 
 .movie-card-page {
-  background-color: #72A98F;
+  background-color: #72A98F;  
   padding-bottom: 20px;
   border : none !important;
 }

@@ -70,11 +70,26 @@ export class ProfilePageComponent implements OnInit {
    * Fetches the list of favorite movies for the current user.
    */
   getFavoriteMoviesForCurrentUser(): void {
-    const username = 'currentUser';
+    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const username = currentUser ? currentUser.Username : '';
     this.fetchMovies.getFavoriteMovies(username).subscribe((favoriteMovies: any) => {
       this.favoriteMovies = favoriteMovies;
+      // Move the logic to display favorite movies here
+      // This ensures that the UI is updated after the data is fetched
     });
   }
+  
+ /**
+   * Opens a dialog to display the director information of the selected movie.
+   * 
+   * @param movie The selected movie object.
+   */
+ openDirectorDialog(movie: any): void {
+  this.dialog.open(DirectorInfoComponent, {
+    data: { movie },
+    width: '800px',
+  });
+}
 
   /**
    * Opens a dialog to display the synopsis of the selected movie.
@@ -84,22 +99,12 @@ export class ProfilePageComponent implements OnInit {
   openSynopsisDialog(movie: any): void {
     this.dialog.open(SynopsisComponent, {
       data: { movie },
-      width: '600px',
+      width: '800px',
     });
   }
 
-  /**
-   * Opens a dialog to display the director information of the selected movie.
-   * 
-   * @param movie The selected movie object.
-   */
-  openDirectorDialog(movie: any): void {
-    this.dialog.open(DirectorInfoComponent, {
-      data: { directorName: movie.Director },
-      width: '600px',
-    });
-  }
-
+ 
+  
   /**
    * Removes a movie from the user's list of favorite movies.
    * 

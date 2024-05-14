@@ -45,6 +45,8 @@ export class UpdateUserComponent implements OnInit {
       this.fetchApiData.getUserProfile().subscribe(
         (response: any) => {
           this.userData = response; // Assign user data from API response
+          // Optionally, you can remove the password field from the userData if you don't want to display it in the form
+          delete this.userData.Password;
         },
         (error: any) => {
           console.error('Error fetching user data:', error);

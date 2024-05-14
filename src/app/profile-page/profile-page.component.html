@@ -1,27 +1,28 @@
+<!DOCTYPE html>
 <div class="page-container">
   <h1 class="username-welcome">
     Welcome <span>{{ username }}</span> !
   </h1>
 
   <mat-tab-group class="favorite-movies-container">
-    <mat-tab class="favorite-movies-label" label="My list of favorite movies">
+    <mat-tab label="My list of favorite movies">
       <div class="movie-grid">
-        <ng-container *ngIf="favorites.length > 0; else noFavorites">
-          <mat-card *ngFor="let movie of favorites; let i = index">
-            <mat-dialog-content>
+        <ng-container
+          class="fav-movie-card"
+          *ngIf="favoriteMovies.length > 0; else noFavorites"
+        >
+          <mat-card *ngFor="let movie of favoriteMovies; let i = index">
+            <mat-dialog-content class="user-fav-movie">
               <mat-card-header>
-                <mat-card-title>{{ movie.Title }}</mat-card-title>
-                <mat-card-subtitle
-                  >Directed by: {{ movie.Director }}</mat-card-subtitle
-                >
-                <mat-card-subtitle>{{ movie.Genre }}</mat-card-subtitle>
+                <mat-card-title class="my-fav-title">{{
+                  movie.Title
+                }}</mat-card-title>
               </mat-card-header>
-
               <img
                 mat-card-image
-                src="{{ movie.ImgPath }}"
-                alt="{{ movie.Title }}"
-                width="{{ 230 }}"
+                class="fav-movie-image"
+                [src]="movie.imageurl"
+                [alt]="movie.Title"
               />
               <mat-card-actions>
                 <button
@@ -43,7 +44,7 @@
                   mat-icon-button
                   (click)="removeFavoriteMovie(movie)"
                 >
-                  <mat-icon>{{ "favorite" }}</mat-icon>
+                  <mat-icon>favorite</mat-icon>
                 </button>
               </mat-card-actions>
             </mat-dialog-content>
