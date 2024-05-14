@@ -8,7 +8,7 @@ body {
   display: flex; /* Ensure flex layout */
   flex-wrap: nowrap; /* Prevent wrapping of movie cards */
   overflow-x: auto; /* Enable horizontal scrolling */
-  margin-top: 100; 
+  margin-top: 60px; 
   background-color: #72A98F;
   width: 100vw; /* Cover the entire viewport width */
 }
@@ -23,6 +23,7 @@ body {
 .movie-card-header {
   background-color: #72A98F;
   color: #433A3F;
+  margin-top: 50px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 20px;
